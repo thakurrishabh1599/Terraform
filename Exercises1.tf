@@ -1,0 +1,14 @@
+provider "aws" {
+  region = "ap-south-1"
+}
+
+resource "aws_instance" "intro" {
+  ami                    = "ami-06984ea821ac0a879"
+  availability_zone      = "ap-south-1a"
+  instance_type          = "t2.micro"
+  key_name               = "jenkin-ssh"
+  vpc_security_group_ids = ["sg-061d7406c00558c7a"]
+  tags = {
+    Name = "Terraform2"
+  }
+}
