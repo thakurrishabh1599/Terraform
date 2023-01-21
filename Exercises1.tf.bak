@@ -12,6 +12,6 @@ resource "aws_instance" "intro" {
   vpc_security_group_ids = ["sg-061d7406c00558c7a"]
   tags = {
     Name = "Terraform2"
-	Project = "Java"
+	Project = "Terraform"
   }
 }
